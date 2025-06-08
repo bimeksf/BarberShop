@@ -28,3 +28,33 @@ startC.textContent= stars
 
 
   });
+
+
+document.addEventListener("DOMContentLoaded", () => {
+  setTimeout(() => {
+    const preloader = document.getElementById("preloader");
+    preloader.classList.add("opacity-0");
+
+    setTimeout(() => {
+      preloader.style.display = "none";
+    }, 1000);
+  }, 1500); 
+});
+
+
+
+
+  gsap.registerPlugin(ScrollTrigger);
+
+const sections = document.querySelector(".horizontal-sections");
+
+gsap.to(sections, {
+  x: () => `-${sections.scrollWidth - window.innerWidth}px`,
+  ease: "none",
+  scrollTrigger: {
+    trigger: sections,
+    pin: true,
+    scrub: 1,
+    end: () => `+=${sections.scrollWidth - window.innerWidth}`
+  }
+});

@@ -12,21 +12,27 @@
       content="kadeřnictví, barber, Praha, střih, barvení"
     />
     <link href="./output.css" rel="stylesheet" />
-
+<script src="https://cdn.tailwindcss.com"></script>
+<script src="https://unpkg.com/gsap@3/dist/gsap.min.js"></script>
+<script src="https://unpkg.com/gsap@3/dist/ScrollTrigger.min.js"></script>
     <title>Salon Elegance</title>
-    <script src="https://cdn.tailwindcss.com"></script>
   </head>
-  <body class="font-sans bg-[#0F0F0F]">
+  <body class="font-sans bg-[#0F0F0F] overflow-x-hidden">
+
+
+<div id="preloader" class="fixed inset-0 bg-white z-50 flex items-center justify-center transition-opacity duration-1000 ">
+  <img id="logo" src="/public/hero.jpg" alt="Logo" class="w-36 h-36 animate-scale-up"  />
+</div>
 
     
  <!-- Header -->
-<header class="bg-black fixed top-0 left-0 right-0 text-[#b79a7a] p-4 z-50 shadow-lg">
+<header class="bg-black fixed top-0 left-0 right-0 text-[#b79a7a] p-4 z-50 shadow-lg ">
   <div class="max-w-6xl mx-auto flex justify-between items-center">
     <h1 class="text-xl font-bold"><a href="/">Salon Elegance</a></h1>
 
     <!-- Hamburger Icon -->
  <button id="menu-toggle" class="text-[#b79a7a] w-8 h-8 relative focus:outline-none">
-  <svg id="hamburger-icon" class="w-8 h-8 fill-current transition-transform duration-300 stroke-[#b79a7a]" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+  <svg id="hamburger-icon" class="w-8 h-8 fill-current transition-transform duration-300 stroke-[#b79a7a] sm:hidden" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
     <path d="M4 5h16M4 12h16M4 19h16" />
   </svg>
   <svg id="close-icon" class="w-8 h-8 fill-current hidden transition-transform duration-300 stroke-[#b79a7a]" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
@@ -177,52 +183,52 @@
                  auto-rows-[250px] sm:auto-rows-[200px] md:auto-rows-[250px]">
 
       <div class="relative overflow-hidden rounded-xl">
-        <img src="/public/gallery/g1.jpg" alt="g1"
+        <img src="/public/gallery/g1.jpg" alt="g1" loading="lazy"
           class="w-full h-full object-cover transition-transform duration-300 hover:scale-105" />
       </div>
       <div class="relative overflow-hidden rounded-xl">
-        <img src="/public/gallery/g2.jpg" alt="g2"
+        <img src="/public/gallery/g2.jpg" alt="g2" loading="lazy"
           class="w-full h-full object-cover transition-transform duration-300 hover:scale-105" />
       </div>
       <div class="relative overflow-hidden rounded-xl col-span-1 sm:col-span-2">
-        <img src="/public/gallery/g3.jpg" alt="g3"
+        <img src="/public/gallery/g3.jpg" alt="g3"loading="lazy"
           class="w-full h-full object-cover transition-transform duration-300 hover:scale-105" />
       </div>
       <div class="relative overflow-hidden rounded-xl">
-        <img src="/public/gallery/g4.jpg" alt="g4"
+        <img src="/public/gallery/g4.jpg" alt="g4" loading="lazy"
           class="w-full h-full object-cover transition-transform duration-300 hover:scale-105" />
       </div>
       <div class="relative overflow-hidden rounded-xl sm:col-row-2">
-        <img src="/public/gallery/g5.jpg" alt="g5"
+        <img src="/public/gallery/g5.jpg" alt="g5" loading="lazy"
           class="w-full h-full object-cover transition-transform duration-300 hover:scale-105" />
       </div>
       <div class="relative overflow-hidden rounded-xl row-span-1">
-        <img src="/public/gallery/g6.jpg" alt="g6"
+        <img src="/public/gallery/g6.jpg" alt="g6" loading="lazy"
           class="w-full h-full object-cover transition-transform duration-300 hover:scale-105" />
       </div>
       <div class="relative overflow-hidden rounded-xl sm:col-span-1">
-        <img src="/public/gallery/g1.jpg" alt="g1 again"
+        <img src="/public/gallery/g1.jpg" alt="g1 again" loading="lazy"
           class="w-full h-full object-cover transition-transform duration-300 hover:scale-105" />
       </div>
       <div class="relative overflow-hidden rounded-xl col-span-1 sm:col-span-2 sm:row-span-2">
-        <img src="/public/gallery/g3.jpg" alt="g3 again"
+        <img src="/public/gallery/g3.jpg" alt="g3 again" loading="lazy"
           class="w-full h-full object-cover transition-transform duration-300 hover:scale-105" />
       </div>
       <div class="relative overflow-hidden rounded-xl sm:col-span-3">
-        <img src="/public/gallery/g5.jpg" alt="g5 again"
+        <img src="/public/gallery/g5.jpg" alt="g5 again" loading="lazy"
           class="w-full h-full object-cover transition-transform duration-300 hover:scale-105" />
       </div>
     </div>
   </div>
 </section>
 
-
-    <!-- O nás -->
-<section id="o-nas" class="bg-[#f3f3f3] py-20 px-6">
+<div class="horizontal-sections flex flex-col lg:flex-row lg:w-[300vw] lg:h-screen overflow-hidden">
+      <!-- O nás -->
+<section id="onas" class="bg-[#f3f3f3] py-20 px-6 w-full lg:w-screen lg:h-screen flex-shrink-0 ">
   <div class="max-w-6xl mx-auto grid grid-cols-1 sm:grid-cols-2 gap-12 items-center">
     
     <div class="space-y-10">
-      <h2 class="text-3xl font-bold mb-4  text-[#b79a7a]">O nás</h2>
+      <h2 class="text-3xl font-bold mb-4  text-[#b79a7a] ">O nás</h2>
       <div class="border-l-4 border-gray-400 pl-4">
         <p class="text-sm text-gray-700">
           Náš tým zkušených profesionálů se zaměřuje na poskytování špičkových služeb péče o vzhled, které jsou šité na míru mužům.        </p>
@@ -241,17 +247,18 @@
     </div>
 
     <div>
-      <img src="/public/gallery/g1.jpg" alt="Náš tým" class="rounded-xl shadow-lg w-full h-auto object-cover" />
+      <img src="/public/gallery/g1.jpg" alt="Náš tým" class="rounded-xl shadow-lg w-full h-auto object-cover" loading="lazy"/>
     </div>
   </div>
 </section>
-<section id="proc-nas" class="py-20 px-4 bg-white text-center">
+
+
+ <!-- proc-nas -->
+<section id="proc-nas" class="py-20 px-4 bg-white text-center w-full lg:w-screen lg:h-screen flex-shrink-0 ">
   <div class="max-w-6xl mx-auto">
     <!-- Nadpis -->
-    <h2 class="text-3xl font-bold mb-4 text-[#b79a7a]">PROČ SI VYBRAT NÁS</h2>
-    <p class="max-w-xl mx-auto text-gray-500 mb-12 text-sm">
-      Naši odborníci poskytují kvalitní služby s důrazem na detail, pohodlí a spokojenost zákazníka. Vaše vlasy i styl jsou u nás v těch nejlepších rukou.
-    </p>
+    <h2 class="text-3xl font-bold mb-10 text-[#b79a7a] text-center  ">PROČ SI VYBRAT NÁS</h2>
+   
 
     <!-- Ikony a popisky -->
     <div class="grid grid-cols-1 sm:grid-cols-3 gap-10 mb-16">
@@ -282,7 +289,7 @@
     <div class="grid grid-cols-1 md:grid-cols-3 gap-8 items-center">
       <!-- Google -->
       <div class="text-center">
-        <img src="./public/google.svg" alt="Google" class="h-8 mx-auto mb-2" />
+        <img src="./public/google.svg" alt="Google" class="h-8 mx-auto mb-2" loading="lazy" />
         <p class="text-4xl font-bold text-gray-900">4.9</p>
         <p class="text-yellow-400 text-xl" id="star">★★★★</p>
 
@@ -291,7 +298,7 @@
 
       <!-- Střední karta s recenzí -->
       <div class="bg-gray-100 p-6 rounded-xl shadow-md">
-        <img src="./public/avatar.svg" alt="Avatar" class="w-14 h-14 rounded-full mx-auto mb-2" />
+        <img src="./public/avatar.svg" alt="Avatar" class="w-14 h-14 rounded-full mx-auto mb-2"  loading="lazy"/>
         <p class="text-yellow-400 text-xl">★★★★★</p>
         <p class="text-sm text-gray-700 italic my-2">
           Skvělý zážitek a profesionální přístup. Přesně vědí, co vám sedne!
@@ -311,11 +318,8 @@
   </div>
 </section>
 
-  
-
-
 <!-- Kontakt -->
-<section id="kontakt" class="max-w-5xl mx-auto px-4 py-20">
+<section id="kontakt" class="max-w-5xl mx-auto px-4 py-20 w-full lg:w-screen lg:h-screen flex-shrink-0">
   <h2 class="text-3xl sm:text-4xl font-bold mb-10 text-center text-[#b79a7a]">Kontaktujte nás</h2>
 
   <div class="grid md:grid-cols-2 gap-12">
@@ -341,7 +345,7 @@
       ></textarea>
       <button
         type="submit"
-        class="bg-[#b79a7a] text-white font-semibold px-6 py-3 rounded-xl hover:bg-[#a38565] transition-all duration-300"
+        class="bg-[#b79a7a] text-white font-semibold px-6 py-3 rounded-xl hover:bg-[#a38565] transition-all duration-300 "
       >
         Odeslat zprávu
       </button>
@@ -359,6 +363,7 @@
   </div>
 </section>
 
+</div>
     <!-- Footer -->
     <footer class="bg-black text-white text-center py-4">
       © 2025 Salon Elegance – Všechna práva vyhrazena
