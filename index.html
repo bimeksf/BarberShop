@@ -3,175 +3,366 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content="Salon Elegance - profesionální kadeřnické služby v Praze.">
-<meta name="keywords" content="kadeřnictví, barber, Praha, střih, barvení">
-    <link href="./output.css" rel="stylesheet"> 
+    <meta
+      name="description"
+      content="Salon Elegance - profesionální kadeřnické služby v Praze."
+    />
+    <meta
+      name="keywords"
+      content="kadeřnictví, barber, Praha, střih, barvení"
+    />
+    <link href="./output.css" rel="stylesheet" />
 
-<title>Salon Elegance</title>
+    <title>Salon Elegance</title>
     <script src="https://cdn.tailwindcss.com"></script>
   </head>
-  <body class="font-sans bg-black ">
+  <body class="font-sans bg-[#0F0F0F]">
 
-    <!-- Header -->
-    <header class="bg-black  fixed top-0  left-0 right-0 text-[#b79a7a] p-4">
-      <div class="max-w-6xl mx-auto flex justify-between items-center">
-        <h1 class="text-xl font-bold"><a href="/">Salon Elegance</a></h1>
-        <nav class="space-x-4">
-          <a href="#sluzby" class="hover:underline">Služby</a>
-          <a href="#galerie" class="hover:underline">Galerie</a>
-          <a href="#onas" class="hover:underline">O nás</a>
-          <a href="#kontakt" class="hover:underline">Kontakt</a>
-        </nav>
-      </div>
-    </header>
+    
+ <!-- Header -->
+<header class="bg-black fixed top-0 left-0 right-0 text-[#b79a7a] p-4 z-50 shadow-lg">
+  <div class="max-w-6xl mx-auto flex justify-between items-center">
+    <h1 class="text-xl font-bold"><a href="/">Salon Elegance</a></h1>
+
+    <!-- Hamburger Icon -->
+ <button id="menu-toggle" class="text-[#b79a7a] w-8 h-8 relative focus:outline-none">
+  <svg id="hamburger-icon" class="w-8 h-8 fill-current transition-transform duration-300 stroke-[#b79a7a]" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+    <path d="M4 5h16M4 12h16M4 19h16" />
+  </svg>
+  <svg id="close-icon" class="w-8 h-8 fill-current hidden transition-transform duration-300 stroke-[#b79a7a]" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+    <path d="M6 18L18 6M6 6l12 12" />
+  </svg>
+</button>
+
+    <!-- Navigation Links -->
+    <nav id="menu" class="hidden md:flex flex-col md:flex-row md:items-center space-y-4 md:space-y-0 md:space-x-6 absolute md:static top-16 left-0 w-full md:w-auto bg-black md:bg-transparent px-6 py-4 md:p-0">
+      <a href="#sluzby" class="block hover:underline">Služby</a>
+      <a href="#galerie" class="block hover:underline">Galerie</a>
+      <a href="#onas" class="block hover:underline">O nás</a>
+      <a href="#kontakt" class="block hover:underline">Kontakt</a>
+    </nav>
+  </div>
+</header>
 
     <!-- Hero sekce -->
-    <section class="bg-[url('/public/hero.jpg')] bg-cover bg-center text-white py-32 text-center h-screen">
-
-        <div class="bg-black bg-opacity-50 p-8 max-w-xl mx-auto mb-10">
-          <h2 class="text-4xl font-bold mb-4">Profesionální péče o váš vzhled</h2>
-          <p class="mb-6">Moderní střihy, styl a relax – objednej se ještě dnes.</p>
-          <div class="p-2 flex justify-center gap-6">
-            <a href="#kontakt" class="bg-[#b79a7a] text-black px-6 py-2  hover:bg-gray-200 hover:scale-105 transition font-bold">Objednat se</a>
-            <a href="#sluzby" class="border-2 border-[#b79a7a] text-white px-6 py-2  hover:bg-[#b79a7a] hover:text-black transition hover:scale-105 font-bold">Služby</a>
+    <section
+      class="bg-[url('/public/hero.jpg')] bg-cover bg-center text-white py-32 text-center min-h-screen"
+    >
+      <div class="bg-black bg-opacity-50 p-8 max-w-xl mx-auto mb-10">
+        <h2 class="text-4xl font-bold mb-4">Profesionální péče o váš vzhled</h2>
+        <p class="mb-6">
+          Moderní střihy, styl a relax – objednej se ještě dnes.
+        </p>
+        <div class="p-2 flex justify-center gap-6">
+          <a
+            href="#kontakt"
+            class="bg-[#b79a7a] text-black px-6 py-2 hover:bg-gray-200 hover:scale-105 transition font-bold"
+            >Objednat se</a
+          >
+          <a
+            href="#sluzby"
+            class="border-2 border-[#b79a7a] text-white px-6 py-2 hover:bg-[#b79a7a] hover:text-black transition hover:scale-105 font-bold"
+            >Služby</a
+          >
+        </div>
+      </div>
+      <div
+        class="bg-white flex flex-col sm:flex-row p-4 text-black mx-4 gap-4 mt-4 sm:mx-16 sm:justify-evenly sm:p-8"
+      >
+        <div class="flex flex-col justify-center p-2">
+          <h2 class="font-bold text-lg sm:text-2xl">Adresa</h2>
+          <p class="sm:text-lg">Vinohrady 55641, Praha</p>
+        </div>
+        <div class="flex flex-col justify-center p-2">
+          <h2 class="font-bold text-lg sm:text-2xl">Otvíraci doba</h2>
+          <p class="sm:text-lg">Po-Pá: 8:00 - 15:00</p>
+        </div>
+        <div class="flex flex-col justify-center p-2 sm:text-2xl">
+          <h2 class="font-bold text-lg p-2">Sledujte nás</h2>
+          <div class="flex justify-center gap-3 items-center">
+            <p>
+              <a href=""><img src="/public/instagram.svg" class="w-9" /></a>
+            </p>
+            <p>
+              <a href=""><img src="/public/facebook.svg" class="w-9" /></a>
+            </p>
           </div>
         </div>
-        <div class="bg-white flex flex-col sm:flex-row p-4 text-black mx-4 gap-4 mt-4 sm:mx-16 sm:justify-evenly sm:p-8 ">
-          <div class="flex flex-col justify-center p-2">
-            <h2 class="font-bold text-lg sm:text-2xl">Adresa</h2>
-            <p class="sm:text-lg">Vinohrady 55641, Praha</p>
-          </div>
-          <div class="flex flex-col justify-center p-2 ">
-            <h2 class="font-bold text-lg sm:text-2xl">Otvíraci doba</h2>
-            <p class="sm:text-lg">Po-Pá: 8:00 - 15:00</p>
-          </div>
-          <div class="flex flex-col justify-center p-2 sm:text-2xl">
-            <h2 class="font-bold text-lg p-2 ">Sledujte nás</h2>
-            <div class="flex justify-center gap-3 items-center">
-              <p><a href=""><img src="/public/instagram.svg" class="w-9"></a></p>
-              <p><a href=""><img src="/public/facebook.svg" class="w-9"></a></p>
-            </div>
-          </div>
-        </div>
-        
-        
-      </section>
-      
-      <!-- Služby -->
-      <section id="sluzby" class=" py-16 min-h-screen  text-[#b79a7a] ">
-        <div class="max-w-6xl mx-auto px-48">
-          <h2 class="text-3xl font-bold text-center mb-10 ">Naše služby</h2>
-          <div class="flex flex-col gap-2">
-  
-            <div class=" p-6  text-center sm:flex sm:justify-evenly sm:text-left">
-              <div>
-                <h3 class="text-xl font-bold mb-2 text-[#b79a7a] ">Střih</h3>
-                <p class="pb-4 text-white opacity-65">Moderní i klasické střihy pro muže i ženy.</p>
-              </div>
-              <p class=" text-white font-bold  sm:self-center">500 Kč</p>
-            </div>
-
-
-
-            <div class=" p-6   text-center sm:flex sm:justify-evenly sm:text-left">
-              <div>
-                         <h3 class="text-xl font-bold mb-2   text-[#b79a7a] ">Úprava vousů</h3>
-  
-                <p class="pb-4 text-white opacity-65">Precizní holení, zastřihování a péče o vousy.</p>
-              </div>
-              <p class="text-white font-bold sm:self-center  ">200 Kč</p>
-            </div>
-
-            <div class=" p-6   text-center sm:flex sm:justify-evenly sm:text-left">
-              <div>
-                         <h3 class="text-xl font-bold mb-2   text-[#b79a7a]">Barvení</h3>
-  
-                          <p class="  pb-4 text-white opacity-65">Profesionální barvy, melíry, balayage a víc.</p>
-  
-              </div>
-              <p class="text-white font-bold  sm:self-center">300 Kč</p>
-            </div>
-  
-            <div class=" p-6   text-center sm:flex sm:justify-evenly sm:text-left">
-              <div>
-                         <h3 class="text-xl font-bold mb-2   text-[#b79a7a]">Barvení</h3>
-  
-                          <p class="  pb-4 text-white opacity-65">Profesionální barvy, melíry, balayage a víc.</p>
-  
-              </div>
-              <p class="text-white font-bold  sm:self-center">300 Kč</p>
-            </div>
-  
-           <div class=" p-6   text-center sm:flex sm:justify-evenly sm:text-left">
-              <div>
-                         <h3 class="text-xl font-bold mb-2   text-[#b79a7a] ">Úprava vousů</h3>
-  
-                <p class="pb-4 text-white opacity-65">Precizní holení, zastřihování a péče o vousy.</p>
-              </div>
-              <p class="text-white font-bold sm:self-center  ">200 Kč</p>
-            </div>
-  
-  
-          
-          </div>
-        </div>
-      </section>
-      <!-- O nás -->
-    <section id="onas" class="max-w-5xl mx-auto px-4 py-16 bg-black h-screen">
-      <h2 class="text-3xl font-bold mb-4">O nás</h2>
-      <p class="text-lg">Jsme moderní kadeřnictví/barber shop s vášní pro styl, péči a zákaznický servis. Naším cílem je, abyste odcházeli spokojení a s úsměvem.</p>
+      </div>
     </section>
 
-
-
-
-    <!-- Galerie -->
-    <section id="galerie" class="max-w-5xl mx-auto px-4 py-16 bg-gray-400">
-      <h2 class="text-3xl font-bold mb-4">Galerie</h2>
-      <p class="text-lg">Jsme moderní kadeřnictví/barber shop s vášní pro styl, péči a zákaznický servis. Naším cílem je, abyste odcházeli spokojení a s úsměvem.</p>
-    </section>
-
-        <!-- Testimonials -->
-    <section id="sluzby" class="bg-gray-100 py-16">
-      <div class="max-w-6xl mx-auto px-4">
-        <h2 class="text-3xl font-bold text-center mb-10">Testimonials</h2>
-        <div class="grid md:grid-cols-3 gap-8">
-          <div class="bg-white p-6 shadow rounded-lg text-center">
-            <h3 class="text-xl font-semibold mb-2">Střih</h3>
-            <p>Moderní i klasické střihy pro muže i ženy.</p>
+    <!-- Služby -->
+    <section id="sluzby" class="py-16 min-h-screen text-[#b79a7a]">
+      <div class="max-w-6xl mx-auto sm:px-48">
+        <h2 class="text-3xl font-bold text-center mb-10">Naše služby</h2>
+        <div class="flex flex-col gap-2">
+          <div class="p-6 text-center sm:flex sm:justify-evenly sm:text-left">
+            <div>
+              <h3 class="text-xl font-bold mb-2 text-[#b79a7a]">Střih</h3>
+              <p class="pb-4 text-white opacity-65">
+                Moderní i klasické střihy pro muže i ženy.
+              </p>
+            </div>
+            <p class="text-white font-bold sm:self-center">500 Kč</p>
           </div>
-          <div class="bg-white p-6 shadow rounded-lg text-center">
-            <h3 class="text-xl font-semibold mb-2">Barvení</h3>
-            <p>Profesionální barvy, melíry, balayage a víc.</p>
+
+          <div class="p-6 text-center sm:flex sm:justify-evenly sm:text-left">
+            <div>
+              <h3 class="text-xl font-bold mb-2 text-[#b79a7a]">
+                Úprava vousů
+              </h3>
+
+              <p class="pb-4 text-white opacity-65">
+                Precizní holení, zastřihování a péče o vousy.
+              </p>
+            </div>
+            <p class="text-white font-bold sm:self-center">200 Kč</p>
           </div>
-          <div class="bg-white p-6 shadow rounded-lg text-center">
-            <h3 class="text-xl font-semibold mb-2">Úprava vousů</h3>
-            <p>Precizní holení, zastřihování a péče o vousy.</p>
+
+          <div class="p-6 text-center sm:flex sm:justify-evenly sm:text-left">
+            <div>
+              <h3 class="text-xl font-bold mb-2 text-[#b79a7a]">Barvení</h3>
+
+              <p class="pb-4 text-white opacity-65">
+                Profesionální barvy, melíry, balayage a víc.
+              </p>
+            </div>
+            <p class="text-white font-bold sm:self-center">300 Kč</p>
+          </div>
+
+          <div class="p-6 text-center sm:flex sm:justify-evenly sm:text-left">
+            <div>
+              <h3 class="text-xl font-bold mb-2 text-[#b79a7a]">Barvení</h3>
+
+              <p class="pb-4 text-white opacity-65">
+                Profesionální barvy, melíry, balayage a víc.
+              </p>
+            </div>
+            <p class="text-white font-bold sm:self-center">300 Kč</p>
+          </div>
+
+          <div class="p-6 text-center sm:flex sm:justify-evenly sm:text-left">
+            <div>
+              <h3 class="text-xl font-bold mb-2 text-[#b79a7a]">
+                Úprava vousů
+              </h3>
+
+              <p class="pb-4 text-white opacity-65">
+                Precizní holení, zastřihování a péče o vousy.
+              </p>
+            </div>
+            <p class="text-white font-bold sm:self-center">200 Kč</p>
           </div>
         </div>
       </div>
     </section>
 
 
-    <!-- Kontakt -->
-    <section id="kontakt" class="max-w-4xl mx-auto px-4 py-16">
-      <h2 class="text-3xl font-bold mb-6">Kontaktujte nás</h2>
-      <form class="space-y-4">
-        <input type="text" placeholder="Vaše jméno" class="w-full border p-3 rounded" required />
-        <input type="email" placeholder="E-mail" class="w-full border p-3 rounded" required />
-        <textarea placeholder="Zpráva" class="w-full border p-3 rounded" rows="5" required></textarea>
-        <button type="submit" class="bg-black text-white px-6 py-2 rounded hover:bg-gray-800 transition">Odeslat</button>
-      </form>
 
-      <div class="mt-10">
-        <iframe class="w-full h-64 rounded" src="https://maps.google.com/maps?q=Praha%201&t=&z=13&ie=UTF8&iwloc=&output=embed" allowfullscreen></iframe>
+
+
+    
+<!-- Galerie -->
+<section id="galerie" class="px-4 py-16 min-h-screen">
+  <div class="max-w-6xl mx-auto flex flex-col justify-center items-center">
+    <h2 class="text-3xl font-bold mb-8 text-[#b79a7a] text-center">Galerie</h2>
+
+    <div
+      class="grid gap-4 w-full
+                 grid-cols-1 
+                 sm:grid-cols-2 
+                 md:grid-cols-3 
+                 lg:grid-cols-4 
+                 xl:grid-cols-5
+                 auto-rows-[250px] sm:auto-rows-[200px] md:auto-rows-[250px]">
+
+      <div class="relative overflow-hidden rounded-xl">
+        <img src="/public/gallery/g1.jpg" alt="g1"
+          class="w-full h-full object-cover transition-transform duration-300 hover:scale-105" />
       </div>
-    </section>
+      <div class="relative overflow-hidden rounded-xl">
+        <img src="/public/gallery/g2.jpg" alt="g2"
+          class="w-full h-full object-cover transition-transform duration-300 hover:scale-105" />
+      </div>
+      <div class="relative overflow-hidden rounded-xl col-span-1 sm:col-span-2">
+        <img src="/public/gallery/g3.jpg" alt="g3"
+          class="w-full h-full object-cover transition-transform duration-300 hover:scale-105" />
+      </div>
+      <div class="relative overflow-hidden rounded-xl">
+        <img src="/public/gallery/g4.jpg" alt="g4"
+          class="w-full h-full object-cover transition-transform duration-300 hover:scale-105" />
+      </div>
+      <div class="relative overflow-hidden rounded-xl sm:col-row-2">
+        <img src="/public/gallery/g5.jpg" alt="g5"
+          class="w-full h-full object-cover transition-transform duration-300 hover:scale-105" />
+      </div>
+      <div class="relative overflow-hidden rounded-xl row-span-1">
+        <img src="/public/gallery/g6.jpg" alt="g6"
+          class="w-full h-full object-cover transition-transform duration-300 hover:scale-105" />
+      </div>
+      <div class="relative overflow-hidden rounded-xl sm:col-span-1">
+        <img src="/public/gallery/g1.jpg" alt="g1 again"
+          class="w-full h-full object-cover transition-transform duration-300 hover:scale-105" />
+      </div>
+      <div class="relative overflow-hidden rounded-xl col-span-1 sm:col-span-2 sm:row-span-2">
+        <img src="/public/gallery/g3.jpg" alt="g3 again"
+          class="w-full h-full object-cover transition-transform duration-300 hover:scale-105" />
+      </div>
+      <div class="relative overflow-hidden rounded-xl sm:col-span-3">
+        <img src="/public/gallery/g5.jpg" alt="g5 again"
+          class="w-full h-full object-cover transition-transform duration-300 hover:scale-105" />
+      </div>
+    </div>
+  </div>
+</section>
+
+
+    <!-- O nás -->
+<section id="o-nas" class="bg-[#f3f3f3] py-20 px-6">
+  <div class="max-w-6xl mx-auto grid grid-cols-1 sm:grid-cols-2 gap-12 items-center">
+    
+    <div class="space-y-10">
+      <h2 class="text-3xl font-bold mb-4  text-[#b79a7a]">O nás</h2>
+      <div class="border-l-4 border-gray-400 pl-4">
+        <p class="text-sm text-gray-700">
+          Náš tým zkušených profesionálů se zaměřuje na poskytování špičkových služeb péče o vzhled, které jsou šité na míru mužům.        </p>
+      </div>
+
+      <p class="text-gray-800 text-sm leading-relaxed">
+        Zdravé vlasy začínají zdravou pokožkou hlavy. Naše omlazující procedury jsou navrženy tak, aby podporovaly zdraví pokožky a vyživovaly vlasové kořínky. Dopřejte si revitalizační zážitek, který zahrnuje čištění, exfoliaci a hydratační péči podle individuálních potřeb.      </p>
+
+      <p class="text-gray-800 text-sm leading-relaxed pb-5">
+        Nebojte se odvážnějšího stylu nebo jemného zvýraznění pomocí našich profesionálních barvicích služeb. Ať už chcete zakrýt šediny, dodat hloubku nebo vytvořit výrazný vzhled – pomůžeme vám najít ten pravý styl.      </p>
+            <a
+            href="#kontakt"
+            class="bg-[#b79a7a] text-black px-6 py-2 hover:bg-gray-200 hover:scale-105 transition font-bold"
+            >Objednat se</a
+          >
+    </div>
+
+    <div>
+      <img src="/public/gallery/g1.jpg" alt="Náš tým" class="rounded-xl shadow-lg w-full h-auto object-cover" />
+    </div>
+  </div>
+</section>
+<section id="proc-nas" class="py-20 px-4 bg-white text-center">
+  <div class="max-w-6xl mx-auto">
+    <!-- Nadpis -->
+    <h2 class="text-3xl font-bold mb-4 text-[#b79a7a]">PROČ SI VYBRAT NÁS</h2>
+    <p class="max-w-xl mx-auto text-gray-500 mb-12 text-sm">
+      Naši odborníci poskytují kvalitní služby s důrazem na detail, pohodlí a spokojenost zákazníka. Vaše vlasy i styl jsou u nás v těch nejlepších rukou.
+    </p>
+
+    <!-- Ikony a popisky -->
+    <div class="grid grid-cols-1 sm:grid-cols-3 gap-10 mb-16">
+      <div>
+        <div class="text-4xl mb-3">🔒</div>
+        <h3 class="font-bold text-lg text-gray-800 mb-1">LICENCOVANÍ</h3>
+        <p class="text-sm text-gray-600">
+          Jsme certifikovaní a školení odborníci, kteří zaručují čisté a bezpečné prostředí.
+        </p>
+      </div>
+      <div>
+        <div class="text-4xl mb-3">💈</div>
+        <h3 class="font-bold text-lg text-gray-800 mb-1">MISTŘI ŘEMESLA</h3>
+        <p class="text-sm text-gray-600">
+          Naši holiči mají vášeň pro detail a poskytují kvalitní střihy každému zákazníkovi.
+        </p>
+      </div>
+      <div>
+        <div class="text-4xl mb-3">🛡️</div>
+        <h3 class="font-bold text-lg text-gray-800 mb-1">DŮVĚRYHODNÍ</h3>
+        <p class="text-sm text-gray-600">
+          Máme silnou online reputaci s hodnocením 5 hvězdiček a stovkami spokojených klientů.
+        </p>
+      </div>
+    </div>
+
+    <!-- Recenze -->
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-8 items-center">
+      <!-- Google -->
+      <div class="text-center">
+        <img src="./public/google.svg" alt="Google" class="h-8 mx-auto mb-2" />
+        <p class="text-4xl font-bold text-gray-900">4.9</p>
+        <p class="text-yellow-400 text-xl" id="star">★★★★</p>
+
+        <p class="text-sm text-gray-600">196 recenzí</p>
+      </div>
+
+      <!-- Střední karta s recenzí -->
+      <div class="bg-gray-100 p-6 rounded-xl shadow-md">
+        <img src="./public/avatar.svg" alt="Avatar" class="w-14 h-14 rounded-full mx-auto mb-2" />
+        <p class="text-yellow-400 text-xl">★★★★★</p>
+        <p class="text-sm text-gray-700 italic my-2">
+          Skvělý zážitek a profesionální přístup. Přesně vědí, co vám sedne!
+        </p>
+        <p class="font-semibold text-gray-800">- Jan Novák</p>
+      </div>
+
+      <!-- Tripadvisor -->
+      <div class="text-center">
+        <img src="./public/avatar.svg" alt="Tripadvisor" class="h-8 mx-auto mb-2" />
+        <p class="text-4xl font-bold text-gray-900">5.0</p>
+        <p class="text-yellow-400 text-xl">★★★★★</p>
+
+        <p class="text-sm text-gray-600">196 recenzí</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+  
+
+
+<!-- Kontakt -->
+<section id="kontakt" class="max-w-5xl mx-auto px-4 py-20">
+  <h2 class="text-3xl sm:text-4xl font-bold mb-10 text-center text-[#b79a7a]">Kontaktujte nás</h2>
+
+  <div class="grid md:grid-cols-2 gap-12">
+    <!-- Formulář -->
+    <form class="space-y-6">
+      <input
+        type="text"
+        placeholder="Vaše jméno"
+        class="w-full border border-gray-300 p-4 rounded-xl shadow-sm focus:outline-none focus:ring-2 focus:ring-[#b79a7a]"
+        required
+      />
+      <input
+        type="email"
+        placeholder="E-mail"
+        class="w-full border border-gray-300 p-4 rounded-xl shadow-sm focus:outline-none focus:ring-2 focus:ring-[#b79a7a]"
+        required
+      />
+      <textarea
+        placeholder="Zpráva"
+        class="w-full border border-gray-300 p-4 rounded-xl shadow-sm focus:outline-none focus:ring-2 focus:ring-[#b79a7a]"
+        rows="6"
+        required
+      ></textarea>
+      <button
+        type="submit"
+        class="bg-[#b79a7a] text-white font-semibold px-6 py-3 rounded-xl hover:bg-[#a38565] transition-all duration-300"
+      >
+        Odeslat zprávu
+      </button>
+    </form>
+
+    <!-- Mapa -->
+    <div class="h-full">
+      <iframe
+        class="w-full h-full min-h-[350px] rounded-xl shadow-md"
+        src="https://maps.google.com/maps?q=Praha%201&t=&z=13&ie=UTF8&iwloc=&output=embed"
+        loading="lazy"
+        allowfullscreen
+      ></iframe>
+    </div>
+  </div>
+</section>
 
     <!-- Footer -->
     <footer class="bg-black text-white text-center py-4">
       © 2025 Salon Elegance – Všechna práva vyhrazena
     </footer>
-        <script defer src="script.js"></script>
+    <script defer src="script.js"></script>
   </body>
 </html>
