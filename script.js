@@ -38,7 +38,7 @@ document.addEventListener("DOMContentLoaded", () => {
     setTimeout(() => {
       preloader.style.display = "none";
     }, 1000);
-  }, 1500); 
+  }, 100); 
 });
 
 
@@ -58,3 +58,29 @@ gsap.to(sections, {
     end: () => `+=${sections.scrollWidth - window.innerWidth}`
   }
 });
+
+
+ window.addEventListener("DOMContentLoaded", () => {
+    gsap.from(".hero-title", {
+      opacity: 0,
+      y: -30,
+      duration: 0.8,
+      ease: "power2.out"
+    });
+
+    gsap.from(".hero-subtitle", {
+      opacity: 0,
+      scale: 0.95,
+      delay: 0.8,
+      duration: 0.6,
+      ease: "power2.out"
+    });
+
+    gsap.from(".hero-buttons", {
+      opacity: 0,
+      y: 20,
+      delay: 1,
+      duration: 0.6,
+      ease: "power2.out"
+    });
+  });
